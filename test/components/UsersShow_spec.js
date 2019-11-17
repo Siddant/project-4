@@ -15,7 +15,7 @@ describe("Semantic UI tests", () => {
     response = Promise.resolve({
       data: {
         id: 1,
-        username: "Siddantgurung",
+        username: "SiddantGurung",
         followers: [],
         following: [
           {
@@ -63,7 +63,7 @@ describe("Semantic UI tests", () => {
     response.then(() => {
       wrapper.update();
       expect(wrapper.find("UsersShow").state().usersDetail).to.be.an("object");
-      expect(wrapper.find("UsersShow").state().usersDetail.id).to.eq(2);
+      expect(wrapper.find("UsersShow").state().usersDetail.id).to.eq(1);
       expect(wrapper.find("UsersShow").state().usersDetail.username).to.eq(
         "SiddantGurung"
       );
@@ -106,7 +106,7 @@ describe("Semantic UI tests", () => {
       ).to.be.eq("a short story about inter");
       expect(
         wrapper.find("a .ui.card.users-profile-card .description").length
-      ).to.be.eq(3);
+      ).to.be.eq(2);
       done();
     });
   });
