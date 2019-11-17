@@ -15,7 +15,7 @@ describe("Semantic UI tests", () => {
     response = Promise.resolve({
       data: {
         id: 1,
-        username: "SiddantGurung",
+        username: "Siddantgurung",
         followers: [],
         following: [
           {
