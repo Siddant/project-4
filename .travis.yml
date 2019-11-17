@@ -15,19 +15,20 @@ jobs:
       script: yarn test
     - stage: "build"
       name: "building project" # names the second Tests stage job
-      script:
-        - echo "passed the test now building"
-        - yarn build
-        - git add .
-        - git commit -m "ready to deploy"
+      if: branch = master
+        script:
+          - echo "passed the test now building"
+          - yarn build
+          - git add .
+          - git commit -m "ready to deploy"
     - stage: "deploy"
       name: "Deploy to heroku"
       if: branch = master
-      script: skip
-      deploy:
-        provider: heroku
-        api_key:
-          secure: $HEROKU_DEPLOY_KEY
-        app: read-meee
-        on:
-          repo: Siddant/project-4
+        script: skip
+        deploy:
+          provider: heroku
+          api_key:
+            secure: $HEROKU_DEPLOY_KEY
+          app: read-meee
+          on:
+            repo: Siddant/project-4
