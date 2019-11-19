@@ -12,11 +12,6 @@
     "build": "webpack -p",
     "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0"
   },
-  "engines": {
-    "node": "10.15.1",
-    "npm": ">=6.4.1",
-    "yarn": ">=1.14.0"
-  },
   "devDependencies": {
     "@babel/register": "^7.0.0",
     "chai": "^4.2.0",
