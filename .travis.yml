@@ -15,8 +15,7 @@ jobs:
     - stage: "Tests" # naming the Tests stage
       name: "Unit Tests" # names the first Tests stage job
       script: yarn test
-    - # stage name not required, will continue to use `test`
-      script: yarn testSecond
+    - script: yarn testSecond
     - stage: "Tests 2" # naming the Tests stage
       name: "Unit Tests 2" # names the first Tests stage job
       script: yarn testSecond
