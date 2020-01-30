@@ -17,7 +17,7 @@ jobs:
       script: yarn test
     - stage: "Tests 2" # naming the Tests stage
       name: "Unit Tests 2" # names the first Tests stage job
-      script: yarn test
+      script: yarn testSecond
     # - stage: "build"
     #   if: branch = master AND type != pull_request
     #   name: "building project" # names the second Tests stage job

@@ -9,6 +9,7 @@
     "serve:react": "webpack-dev-server",
     "serve:flask": "pipenv run flask run -p 4000",
     "test": "mocha --require test/spec_helper --require ignore-styles test/**/*_spec.js --recursive --exit",
+    "testSecond": "mocha --require test/spec_helper --require ignore-styles test/**/*_spec.js --recursive --exit",
     "build": "webpack -p",
     "postinstall": "[ \"$NODE_ENV\" = \"production\" ] && yarn build || exit 0"
   },
