@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "10.15.1"
+  - 10.15.1
 
 before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.14.0
@@ -10,16 +10,17 @@ cache:
   yarn: true
   directories:
     - "node_modules"
-
-env:
-  - TEST_SUITE="yarn test"
-  - TEST_SUITE="yarn testSecond"
-    # script: $TEST_SUITE
 jobs:
   include:
     - stage: "Tests" # naming the Tests stage
       name: "Unit Tests" # names the first Tests stage job
-      script: $TEST_SUITE
+      script: yarn test
+    - name: "Unit Tests 1"
+      script: yarn testSecond
+    - name: "Unit Tests 3"
+    - script:
+        - yarn test
+        - echo "passed the test now building"
     - stage: "Tests 2" # naming the Tests stage
       name: "Unit Tests 2" # names the first Tests stage job
       script: yarn testSecond
