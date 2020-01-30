@@ -14,8 +14,10 @@ jobs:
   include:
     - stage: "Tests" # naming the Tests stage
       name: "Unit Tests" # names the first Tests stage job
-    - script: yarn test
-    - script: yarn testSecond
+      script: yarn test
+    - name: "Unit Tests 1"
+      script: yarn testSecond
+    - name: "Unit Tests 3"
     - script:
         - yarn test
         - echo "passed the test now building"
