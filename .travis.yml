@@ -4,14 +4,15 @@ language: node_js
 #   - 10.15.1
 #   - 7
 #   - 8
-
-before_install:
-  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.14.0
-  - export PATH="$HOME/.yarn/bin:$PATH"
 cache:
   yarn: true
   directories:
     - "node_modules"
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.14.0
+  - export PATH="$HOME/.yarn/bin:$PATH"
+install: yarn
+
 jobs:
   include:
     - stage: "Tests" # naming the Tests stage
