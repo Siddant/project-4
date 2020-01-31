@@ -15,13 +15,12 @@ jobs:
       script: echo 'build complete'
     - stage: "Tests" # naming the Tests stage
       name: "Unit Tests" # names the first Tests stage job
-      script: yarn test
+      script: sleep 90
     - name: "Unit Tests 1"
-      script: yarn testSecond
+      script: sleep 90
     - name: "Unit Tests 3"
     - script:
         - yarn test
-        - echo "passed the test now building"
     - stage: "Tests 2" # naming the Tests stage
       name: "Unit Tests 2" # names the first Tests stage job
       script: yarn testSecond
